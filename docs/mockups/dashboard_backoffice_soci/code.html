@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html class="light" lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script type='text/javascript' nonce='p6RkJeCQ8OxCIjEkU2nXOg==' src='https://contribution.usercontent.google.com/4UK23DdERQ831_MZVdgG36vMNuYgF9_WiInyY4VLookcFHXHALLhbz5xmDLY-ejAz_SvfAtygw3e0Qn5SA9nGBYDLU85TaYQT8K5RG6KvqmvaEVbe26eBwGKJcLKQBa3B3OiZzTEQkNJpwdzTYWXnVQqEY-A0N6UHtdIYVlz_dVcblq5l6T1TZcDL7qF-T-98IUh2y-80Q0kzqMH-3qdx_tnJTyNTieT2eBetb9AdS8SPU5vEUDstQ1jdiEaW-xWg8c6EnlY-juQ3QYTiMbWj9POZfXV4d0mKxaVCounFZvFbTkSYarMGbU1KAinUVby2a4wtMhTLRMCvmINi58LWxh__SzD1eaD2Eu5Kn4pl3Y0usB0d2GDwvTMcem71tOpvWvkQfLVddoPmktHDf4yAjfPshq-dVRoZ1CQNU-in7MTPXSlvJVUM1JpZsyPWOW7HzuWEJSUbycRqdyPU9wFxA-Xmb1noME0SMcZ1Rwgiyi95bLDzXuwppNzXPvDlKYHGhMaLZ2u7W15L8mGJXp-i_KHYvzbYgxa-y3A7hIgbgf75wR8c0vdGzQDQjjkoiY1t0AyKhPgbEiecM56hxmstygULZ1Uc1Gbio00fYxZIFXEQUyvl-DqU_t8rg9_0QOHT7_Np7CUMNGK534Wll2CHhLgr3mLdduhLRViR7gReFkNmAkxNLVvLnIOcJrr8qhnMISFbdZUP3YlrfEVQpnehq3as79SfrD9CwFN2Ft1Vwaw6eRlg15Ce_eHoA5KpL1YKfxZ8ck47-BF53RiDcCtwLIXkAC7oYpVtX0b5qBI'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#6f3800",
+                        "on-surface": "#0b1c30",
+                        "on-primary-fixed": "#001c37",
+                        "on-surface-variant": "#42474f",
+                        "secondary-fixed": "#ffddb8",
+                        "surface-tint": "#2d6197",
+                        "tertiary": "#532800",
+                        "on-primary-container": "#8ebdf9",
+                        "secondary": "#855300",
+                        "outline-variant": "#c2c7d1",
+                        "on-tertiary-container": "#f9a767",
+                        "secondary-container": "#fea619",
+                        "secondary-fixed-dim": "#ffb95f",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#213145",
+                        "on-secondary-fixed": "#2a1700",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#eaf1ff",
+                        "surface": "#f8f9ff",
+                        "surface-container": "#e5eeff",
+                        "surface-variant": "#d3e4fe",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#653e00",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-dim": "#cbdbf5",
+                        "tertiary-fixed": "#ffdcc4",
+                        "on-primary-fixed-variant": "#07497d",
+                        "tertiary-container": "#743b00",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#684000",
+                        "primary-fixed": "#d2e4ff",
+                        "primary": "#00355f",
+                        "primary-container": "#0f4c81",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-background": "#0b1c30",
+                        "primary-fixed-dim": "#a0c9ff",
+                        "inverse-primary": "#a0c9ff",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#dce9ff",
+                        "on-primary": "#ffffff",
+                        "outline": "#727780",
+                        "tertiary-fixed-dim": "#ffb780",
+                        "on-tertiary-fixed": "#2f1400",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#eff4ff",
+                        "surface-bright": "#f8f9ff",
+                        "background": "#f8f9ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "sm": "8px",
+                        "xl": "32px",
+                        "lg": "24px",
+                        "gutter": "24px",
+                        "md": "16px",
+                        "unit": "4px",
+                        "2xl": "48px",
+                        "margin": "32px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "h1": ["Inter"],
+                        "h3": ["Inter"],
+                        "body-md": ["Inter"],
+                        "h2": ["Inter"],
+                        "data-mono": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "h1": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "h3": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "h2": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "data-mono": ["14px", {"lineHeight": "20px", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface flex min-h-screen">
+<!-- Navigation Drawer (Shell Component) -->
+<aside class="hidden md:flex flex-col h-screen p-md space-y-sm bg-surface-container-low border-r border-outline-variant w-64 fixed left-0 top-0 z-40">
+<div class="px-md py-lg">
+<h2 class="text-h2 font-h2 font-black text-primary">Backoffice</h2>
+<p class="text-label-sm font-label-sm text-outline">Partner Portal</p>
+</div>
+<nav class="flex-1 space-y-xs">
+<a class="flex items-center gap-md p-md bg-primary-container text-on-primary-container rounded-lg font-bold translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-body-md font-body-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-md p-md text-on-surface-variant hover:bg-surface-variant transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="text-body-md font-body-md">Collaboratori</span>
+</a>
+<a class="flex items-center gap-md p-md text-on-surface-variant hover:bg-surface-variant transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="business_center">business_center</span>
+<span class="text-body-md font-body-md">Commesse</span>
+</a>
+<a class="flex items-center gap-md p-md text-on-surface-variant hover:bg-surface-variant transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="text-body-md font-body-md">Financials</span>
+</a>
+<a class="flex items-center gap-md p-md text-on-surface-variant hover:bg-surface-variant transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-body-md font-body-md">Settings</span>
+</a>
+</nav>
+<div class="mt-auto p-md flex items-center gap-md border-t border-outline-variant pt-lg">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold overflow-hidden">
+<img alt="Marta" data-alt="A professional headshot of a high-level female executive with a warm but authoritative expression. She is in a bright, modern office with soft daylight coming through large windows. The image has a clean, corporate photography style with a shallow depth of field, highlighting the professional persona within a minimalist, high-end consulting environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvA0eiyMCDa-rDFpBDcgp4D7bYmiWBAMOqhPAaG4R8fZ131EhAOoMMJWQdJkUTbJeGHCjW5v5SACpFmdNK-WHlAynF6t1dmA1Ri1ezU4fa6KrBNUozOrJpVU1joZDR-2JvSdLXsmiyZkUv3pBQCv97gIE0NKtAlLtv2lqjPUhxDLu1jXhj7rMVm6Q_w-EvwYtoPYR3NaaKrV3VQPJuf_-7VxXlu6dzscAY_dyWTWZHaAbx8RNTo5OF0IpfPchu_PNtBjevA_i7DiKW"/>
+</div>
+<div>
+<p class="text-body-md font-bold text-on-surface">Marta</p>
+<p class="text-label-sm text-outline">Socia Fondatrice</p>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-64 bg-surface min-h-screen">
+<!-- TopAppBar (Shell Component) -->
+<header class="sticky top-0 z-30 bg-surface flex justify-between items-center w-full px-lg py-md border-b border-outline-variant">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined md:hidden text-primary" data-icon="menu">menu</span>
+<h1 class="text-h2 font-h2 font-bold text-primary">Coaching Planner</h1>
+</div>
+<div class="flex items-center gap-lg">
+<!-- Period Filter -->
+<div class="flex items-center bg-surface-container-high rounded-full px-md py-xs border border-outline-variant">
+<span class="material-symbols-outlined text-outline text-[20px] mr-xs" data-icon="calendar_today">calendar_today</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Ottobre 2023</span>
+<span class="material-symbols-outlined text-outline text-[20px] ml-xs" data-icon="arrow_drop_down">arrow_drop_down</span>
+</div>
+<div class="flex items-center gap-md">
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container transition-colors p-sm rounded-full" data-icon="notifications">notifications</button>
+<div class="w-8 h-8 rounded-full bg-surface-variant border border-outline-variant overflow-hidden">
+<img alt="Avatar" data-alt="A small profile avatar representation for a corporate user interface. The avatar shows a clean, minimalist silhouette against a soft blue background, consistent with a professional management consulting software aesthetic. The lighting is flat and modern, focusing on functional clarity and high-end digital design principles." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7-sRXZnLqdwjxbuQCbkUZ55Sm0FcEH9ICGMBv3NO4FAl_Wwl2fwjjAlsMmCWLwTNV7TlNn29xcquP4j1Ly9wNrYHRbXzJ3H9OUk72GSv6tqVNvXh9JzO3b1nde103UC35LyK7FtQ7QZMcJuSQcWVdMXJcRPVh4iwipUS_cCwb0BwYz1E35um5BZvyXknIo3w8kNzpuR93b956VPXl13taThnqVB_RVPtYRNmvN1i891r5O3nQqU27uuUSG4s9HDauSQ7adZncRJt7"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Dashboard Content -->
+<div class="p-gutter max-w-7xl mx-auto space-y-gutter">
+<!-- KPI Overview Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg flex flex-col gap-sm">
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-outline uppercase tracking-wider">Totale Ore Mese</span>
+<span class="material-symbols-outlined text-primary" data-icon="schedule">schedule</span>
+</div>
+<div class="flex items-baseline gap-sm">
+<span class="text-h1 font-h1 text-on-surface">1,284</span>
+<span class="text-label-sm text-primary font-bold">+12% vs prec.</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[78%]"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg flex flex-col gap-sm">
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-outline uppercase tracking-wider">Commesse Attive</span>
+<span class="material-symbols-outlined text-primary" data-icon="business_center">business_center</span>
+</div>
+<div class="flex items-baseline gap-sm">
+<span class="text-h1 font-h1 text-on-surface">24</span>
+<span class="text-label-sm text-on-surface-variant font-medium">4 in chiusura</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[60%]"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg flex flex-col gap-sm">
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-outline uppercase tracking-wider">Rimborsi Totali</span>
+<span class="material-symbols-outlined text-primary" data-icon="payments">payments</span>
+</div>
+<div class="flex items-baseline gap-sm">
+<span class="text-h1 font-h1 text-on-surface">€ 4.120</span>
+<span class="text-label-sm text-error font-bold">+5% budget</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full w-[95%]"></div>
+</div>
+</div>
+</div>
+<!-- Main Grid: Attention & Collaborators -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-lg items-start">
+<!-- Section: Attenzione (Critical Projects) -->
+<section class="lg:col-span-8 bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden">
+<div class="px-lg py-md border-b border-outline-variant flex items-center justify-between bg-surface-bright">
+<div class="flex items-center gap-sm text-secondary">
+<span class="material-symbols-outlined" data-icon="warning">warning</span>
+<h3 class="text-h3 font-h3">Attenzione: Sforamento Budget</h3>
+</div>
+<button class="text-label-sm font-label-sm text-primary hover:underline">Vedi tutte</button>
+</div>
+<div class="p-0">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low">
+<th class="px-lg py-md text-label-sm font-label-sm text-outline border-b border-outline-variant">PROGETTO</th>
+<th class="px-lg py-md text-label-sm font-label-sm text-outline border-b border-outline-variant">CLIENTE</th>
+<th class="px-lg py-md text-label-sm font-label-sm text-outline border-b border-outline-variant text-right">ORE / BUDGET</th>
+<th class="px-lg py-md text-label-sm font-label-sm text-outline border-b border-outline-variant text-right">STATO</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-lg py-lg">
+<p class="text-body-md font-bold text-on-surface">Digital Transformation 2.0</p>
+<p class="text-label-sm text-outline">PM: G. Rossi</p>
+</td>
+<td class="px-lg py-lg text-body-md text-on-surface-variant">TechLogistics SpA</td>
+<td class="px-lg py-lg text-right">
+<div class="flex flex-col items-end">
+<span class="text-data-mono font-data-mono text-secondary font-bold">110%</span>
+<span class="text-label-sm text-outline">440h / 400h</span>
+</div>
+</td>
+<td class="px-lg py-lg text-right">
+<span class="px-sm py-xs bg-secondary-fixed text-on-secondary-fixed-variant text-label-sm font-bold rounded-full border border-secondary">Critical</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-lg py-lg">
+<p class="text-body-md font-bold text-on-surface">HR Optimization</p>
+<p class="text-label-sm text-outline">PM: F. Bianchi</p>
+</td>
+<td class="px-lg py-lg text-body-md text-on-surface-variant">RetailHub</td>
+<td class="px-lg py-lg text-right">
+<div class="flex flex-col items-end">
+<span class="text-data-mono font-data-mono text-secondary font-bold">104%</span>
+<span class="text-label-sm text-outline">156h / 150h</span>
+</div>
+</td>
+<td class="px-lg py-lg text-right">
+<span class="px-sm py-xs bg-secondary-fixed text-on-secondary-fixed-variant text-label-sm font-bold rounded-full border border-secondary">Over-budget</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-lg py-lg">
+<p class="text-body-md font-bold text-on-surface">Supply Chain Audit</p>
+<p class="text-label-sm text-outline">PM: M. Verdi</p>
+</td>
+<td class="px-lg py-lg text-body-md text-on-surface-variant">Global Manu Ltd</td>
+<td class="px-lg py-lg text-right">
+<div class="flex flex-col items-end">
+<span class="text-data-mono font-data-mono text-on-tertiary-fixed-variant font-bold">98%</span>
+<span class="text-label-sm text-outline">294h / 300h</span>
+</div>
+</td>
+<td class="px-lg py-lg text-right">
+<span class="px-sm py-xs bg-surface-container-high text-on-surface-variant text-label-sm font-bold rounded-full border border-outline-variant">Warning</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Section: Collaboratori (Latest Activity) -->
+<section class="lg:col-span-4 space-y-lg">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg">
+<div class="flex items-center justify-between mb-lg">
+<h3 class="text-h3 font-h3 text-primary">Collaboratori</h3>
+<span class="text-label-sm text-outline">Ultimi 7 gg</span>
+</div>
+<div class="space-y-md">
+<!-- Collab 1 -->
+<div class="space-y-xs">
+<div class="flex justify-between items-end">
+<span class="text-body-md font-bold text-on-surface">Andrea M.</span>
+<span class="text-data-mono font-data-mono text-primary font-bold">42h</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-full"></div>
+</div>
+</div>
+<!-- Collab 2 -->
+<div class="space-y-xs">
+<div class="flex justify-between items-end">
+<span class="text-body-md font-bold text-on-surface">Sara L.</span>
+<span class="text-data-mono font-data-mono text-primary font-bold">38h</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[90%]"></div>
+</div>
+</div>
+<!-- Collab 3 -->
+<div class="space-y-xs">
+<div class="flex justify-between items-end">
+<span class="text-body-md font-bold text-on-surface">Luca T.</span>
+<span class="text-data-mono font-data-mono text-primary font-bold">32h</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[76%]"></div>
+</div>
+</div>
+<!-- Collab 4 -->
+<div class="space-y-xs">
+<div class="flex justify-between items-end">
+<span class="text-body-md font-bold text-on-surface">Elena P.</span>
+<span class="text-data-mono font-data-mono text-primary font-bold">28h</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[66%]"></div>
+</div>
+</div>
+</div>
+<button class="w-full mt-lg py-sm border border-outline-variant rounded-lg text-label-sm font-label-sm text-on-surface-variant hover:bg-surface-variant transition-colors">
+                            Visualizza Report Completo
+                        </button>
+</div>
+<!-- Quick Actions Card -->
+<div class="bg-primary-container text-on-primary-container rounded-xl p-lg space-y-md shadow-sm">
+<p class="font-bold text-body-lg">Azioni Rapide</p>
+<div class="grid grid-cols-2 gap-sm">
+<button class="flex flex-col items-center justify-center p-md bg-surface text-primary rounded-lg gap-xs hover:bg-primary-container hover:text-on-primary-container transition-colors border border-transparent">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span class="text-label-sm">Nuova Commessa</span>
+</button>
+<button class="flex flex-col items-center justify-center p-md bg-surface text-primary rounded-lg gap-xs hover:bg-primary-container hover:text-on-primary-container transition-colors border border-transparent">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="text-label-sm">Genera Report</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation for Mobile (Shell Component) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center bg-surface border-t border-outline-variant px-sm py-xs">
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1 scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-label-sm font-label-sm">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="business_center">business_center</span>
+<span class="text-label-sm font-label-sm">Commesse</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="text-label-sm font-label-sm">Financials</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-label-sm font-label-sm">Profile</span>
+</a>
+</nav>
+</body></html>

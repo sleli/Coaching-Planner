@@ -1,0 +1,139 @@
+{
+  "stories": [
+    {
+      "code": "US-001",
+      "title": "US-001: Gestire i clienti attivi e disattivati",
+      "epic_code": "EP-001",
+      "epic_title": "Anagrafiche e struttura operativa",
+      "priority": "HIGH",
+      "story_points": 3,
+      "body": "## Story\n\nAs Marta,\nI want creare, modificare e disattivare i clienti,\nso that possa mantenere ordinata l'anagrafica aziendale e usare solo clienti validi nelle commesse operative.\n\n## Demonstrates\n\nMarta apre l'area clienti, inserisce un nuovo cliente con i dati essenziali, aggiorna un'informazione anagrafica e disattiva un cliente non piu operativo. Nella lista vede chiaramente quali clienti sono attivi e puo evitare di usarne di obsoleti.\n\n## Acceptance Criteria\n\n- [ ] Marta puo creare un cliente inserendo almeno nome e stato attivo, e il nuovo cliente compare subito nell'elenco.\n- [ ] Marta puo modificare i dati anagrafici di un cliente esistente e rivedere i valori aggiornati senza duplicati.\n- [ ] Marta puo disattivare un cliente esistente e il cliente risulta non piu selezionabile nei nuovi flussi operativi.\n\n---\n\n**Epic:** EP-001 — Anagrafiche e struttura operativa\n**Priority:** HIGH | **Story Points:** 3\n**Blocked by:** -\n**Scope:** MVP\n\n_Created by /archetipo-spec_"
+    },
+    {
+      "code": "US-002",
+      "title": "US-002: Creare e chiudere commesse collegate a un cliente",
+      "epic_code": "EP-001",
+      "epic_title": "Anagrafiche e struttura operativa",
+      "priority": "HIGH",
+      "story_points": 3,
+      "body": "## Story\n\nAs Marta,\nI want creare, aggiornare e chiudere commesse associate a un cliente,\nso that possa organizzare il lavoro per incarico e distinguere cio che e ancora operativo da cio che e concluso.\n\n## Demonstrates\n\nMarta seleziona un cliente, crea una nuova commessa e la vede disponibile per le assegnazioni operative. Quando il lavoro termina, chiude la commessa e questa risulta separata da quelle ancora attive.\n\n## Acceptance Criteria\n\n- [ ] Marta puo creare una commessa associandola a un cliente attivo e la commessa compare nell'elenco del cliente corretto.\n- [ ] Marta puo aggiornare i dati principali di una commessa esistente senza perderne l'associazione al cliente.\n- [ ] Marta puo chiudere una commessa e la commessa non appare piu tra quelle operative per nuovi inserimenti.\n\n---\n\n**Epic:** EP-001 — Anagrafiche e struttura operativa\n**Priority:** HIGH | **Story Points:** 3\n**Blocked by:** US-001\n**Scope:** MVP\n\n_Created by /archetipo-spec_"
+    },
+    {
+      "code": "US-003",
+      "title": "US-003: Configurare il budget ore di una commessa",
+      "epic_code": "EP-001",
+      "epic_title": "Anagrafiche e struttura operativa",
+      "priority": "HIGH",
+      "story_points": 2,
+      "body": "## Story\n\nAs Marta,\nI want impostare e aggiornare il budget ore previsto per una commessa,\nso that possa confrontare facilmente il lavoro consuntivato con la capienza pianificata.\n\n## Demonstrates\n\nMarta apre una commessa attiva, inserisce il monte ore previsto e lo salva. Tornando sul dettaglio della commessa vede il budget valorizzato e pronto per i controlli successivi.\n\n## Acceptance Criteria\n\n- [ ] Marta puo inserire un budget ore numerico su una commessa attiva e il valore viene salvato correttamente.\n- [ ] Marta puo aggiornare il budget ore di una commessa gia configurata e vedere subito il nuovo valore nel dettaglio.\n- [ ] Una commessa senza budget configurato mostra chiaramente che il valore non e ancora impostato.\n\n---\n\n**Epic:** EP-001 — Anagrafiche e struttura operativa\n**Priority:** HIGH | **Story Points:** 2\n**Blocked by:** US-002\n**Scope:** MVP\n\n_Created by /archetipo-spec_"
+    },
+    {
+      "code": "US-004",
+      "title": "US-004: Gestire collaboratori e assegnazioni alle commesse",
+      "epic_code": "EP-001",
+      "epic_title": "Anagrafiche e struttura operativa",
+      "priority": "HIGH",
+      "story_points": 5,
+      "body": "## Story\n\nAs Marta,\nI want definire i collaboratori freelance attivi e associarli alle commesse rilevanti,\nso that ogni persona veda solo le commesse su cui puo lavorare e il backoffice mantenga un perimetro operativo corretto.\n\n## Demonstrates\n\nMarta apre l'elenco collaboratori, completa il profilo operativo di un freelance e gli assegna una o piu commesse attive. Quando controlla le assegnazioni, vede chiaramente quali commesse sono disponibili per ciascun collaboratore.\n\n## Acceptance Criteria\n\n- [ ] Marta puo vedere l'elenco degli utenti/collaboratori disponibili e completarne le informazioni operative necessarie alla gestione.\n- [ ] Marta puo associare un collaboratore a una o piu commesse attive e ritrovare le assegnazioni salvate nel dettaglio del collaboratore o della commessa.\n- [ ] Marta puo rimuovere un'assegnazione esistente senza alterare altre assegnazioni dello stesso collaboratore.\n\n---\n\n**Epic:** EP-001 — Anagrafiche e struttura operativa\n**Priority:** HIGH | **Story Points:** 5\n**Blocked by:** US-002\n**Scope:** MVP\n\n_Created by /archetipo-spec_\n\n**Extends boilerplate:** User model and authenticated dashboard"
+    },
+    {
+      "code": "US-005",
+      "title": "US-005: Inserire ore su una commessa assegnata",
+      "epic_code": "EP-002",
+      "epic_title": "Consuntivazione ore freelance",
+      "priority": "HIGH",
+      "story_points": 3,
+      "body": "## Story\n\nAs Luca,\nI want registrare le ore lavorate scegliendo data, commessa assegnata e quantita,\nso that possa aggiornare in pochi passaggi il mio consuntivo mensile.\n\n## Demonstrates\n\nLuca apre il frontoffice, seleziona una delle sue commesse, inserisce data e ore lavorate e salva. Subito dopo vede la registrazione nell'elenco personale e il totale mensile aggiornato.\n\n## Acceptance Criteria\n\n- [ ] Luca puo creare una registrazione ore scegliendo solo tra le commesse a lui assegnate.\n- [ ] Una registrazione salvata mostra almeno data, commessa e quantita ore nell'elenco personale del collaboratore.\n- [ ] Se Luca prova a salvare la registrazione senza uno dei campi obbligatori, riceve un messaggio di errore chiaro e l'inserimento non viene completato.\n\n---\n\n**Epic:** EP-002 — Consuntivazione ore freelance\n**Priority:** HIGH | **Story Points:** 3\n**Blocked by:** US-004\n**Scope:** MVP\n\n_Created by /archetipo-spec_"
+    },
+    {
+      "code": "US-006",
+      "title": "US-006: Correggere ore gia inserite dal collaboratore",
+      "epic_code": "EP-002",
+      "epic_title": "Consuntivazione ore freelance",
+      "priority": "HIGH",
+      "story_points": 2,
+      "body": "## Story\n\nAs Luca,\nI want modificare le mie ore gia inserite,\nso that possa correggere errori senza dover chiedere interventi manuali al backoffice.\n\n## Demonstrates\n\nLuca individua una registrazione inserita in precedenza, aggiorna il numero di ore e salva la correzione. Il riepilogo personale mostra subito il dato corretto.\n\n## Acceptance Criteria\n\n- [ ] Luca puo aprire una propria registrazione ore esistente e modificarne almeno data, commessa o quantita ore.\n- [ ] Dopo il salvataggio, l'elenco personale mostra i valori aggiornati senza creare una seconda registrazione.\n- [ ] Luca non puo modificare registrazioni che non appartengono a lui.\n\n---\n\n**Epic:** EP-002 — Consuntivazione ore freelance\n**Priority:** HIGH | **Story Points:** 2\n**Blocked by:** US-005\n**Scope:** MVP\n\n_Created by /archetipo-spec_"
+    },
+    {
+      "code": "US-007",
+      "title": "US-007: Vedere il totale ore del mese corrente",
+      "epic_code": "EP-002",
+      "epic_title": "Consuntivazione ore freelance",
+      "priority": "HIGH",
+      "story_points": 3,
+      "body": "## Story\n\nAs Luca,\nI want vedere il totale delle ore registrate nel mese corrente,\nso that possa controllare in tempo reale se il mio consuntivo mensile e completo.\n\n## Demonstrates\n\nLuca apre la sua dashboard mensile e vede immediatamente il totale ore gia registrato nel mese in corso. Dopo un nuovo inserimento o una modifica, il totale si aggiorna e riflette il dato corrente.\n\n## Acceptance Criteria\n\n- [ ] La dashboard personale mostra il totale delle ore del mese corrente calcolato sulle registrazioni del collaboratore autenticato.\n- [ ] Se nel mese corrente non esistono registrazioni, la dashboard mostra chiaramente un totale pari a zero.\n- [ ] Il totale mensile si aggiorna dopo l'inserimento o la modifica di una registrazione ore.\n\n---\n\n**Epic:** EP-002 — Consuntivazione ore freelance\n**Priority:** HIGH | **Story Points:** 3\n**Blocked by:** US-005\n**Scope:** MVP\n\n_Created by /archetipo-spec_\n\n**Extends boilerplate:** protected dashboard page"
+    },
+    {
+      "code": "US-008",
+      "title": "US-008: Vedere la distribuzione mensile delle ore per commessa",
+      "epic_code": "EP-002",
+      "epic_title": "Consuntivazione ore freelance",
+      "priority": "HIGH",
+      "story_points": 4,
+      "body": "## Story\n\nAs Luca,\nI want vedere come sono distribuite le mie ore mensili tra le diverse commesse,\nso that possa capire rapidamente dove ho concentrato il lavoro nel periodo.\n\n## Demonstrates\n\nLuca apre il riepilogo mensile e trova una vista per commessa con le ore aggregate del mese corrente. Scorrendo l'elenco capisce subito su quali incarichi ha lavorato di piu e dove non ha ancora registrato attivita.\n\n## Acceptance Criteria\n\n- [ ] Il collaboratore vede un riepilogo del mese corrente con una riga per ogni commessa su cui ha registrato ore.\n- [ ] Ogni riga mostra almeno il nome della commessa e il totale ore del mese per quella commessa.\n- [ ] La somma delle ore mostrate per commessa corrisponde al totale mensile personale del collaboratore.\n\n---\n\n**Epic:** EP-002 — Consuntivazione ore freelance\n**Priority:** HIGH | **Story Points:** 4\n**Blocked by:** US-007\n**Scope:** MVP\n\n_Created by /archetipo-spec_"
+    },
+    {
+      "code": "US-009",
+      "title": "US-009: Configurare i tier di rimborso per distanza",
+      "epic_code": "EP-003",
+      "epic_title": "Rimborsi trasferta",
+      "priority": "HIGH",
+      "story_points": 3,
+      "body": "## Story\n\nAs Marta,\nI want definire e aggiornare i tier di rimborso trasferta basati sulla distanza,\nso that i collaboratori possano usare regole uniformi quando registrano le trasferte.\n\n## Demonstrates\n\nMarta apre l'area rimborsi, crea i tier di distanza con i relativi importi e li rivede in elenco. Quando modifica una soglia o un importo, vede subito la configurazione aggiornata disponibile per il team.\n\n## Acceptance Criteria\n\n- [ ] Marta puo creare un tier di rimborso specificando almeno una fascia di distanza e il relativo importo.\n- [ ] Marta puo modificare un tier esistente e ritrovare i valori aggiornati nell'elenco.\n- [ ] L'elenco dei tier mostra in modo chiaro tutte le regole attive disponibili per i collaboratori.\n\n---\n\n**Epic:** EP-003 — Rimborsi trasferta\n**Priority:** HIGH | **Story Points:** 3\n**Blocked by:** -\n**Scope:** MVP\n\n_Created by /archetipo-spec_"
+    },
+    {
+      "code": "US-010",
+      "title": "US-010: Registrare un rimborso usando i tier disponibili",
+      "epic_code": "EP-003",
+      "epic_title": "Rimborsi trasferta",
+      "priority": "MEDIUM",
+      "story_points": 3,
+      "body": "## Story\n\nAs Luca,\nI want registrare una trasferta scegliendo commessa e tier di rimborso,\nso that possa dichiarare il rimborso dovuto senza ambiguita di calcolo.\n\n## Demonstrates\n\nLuca apre il form rimborsi, seleziona una commessa a cui e assegnato e sceglie uno dei tier disponibili. Dopo il salvataggio vede il rimborso registrato con l'importo associato alla regola selezionata.\n\n## Acceptance Criteria\n\n- [ ] Luca puo creare un rimborso scegliendo solo tra le proprie commesse assegnate e tra i tier attivi configurati dal backoffice.\n- [ ] Una volta salvato, il rimborso mostra almeno data, commessa, tier selezionato e importo associato.\n- [ ] Luca non puo creare un rimborso se non esistono tier attivi disponibili.\n\n---\n\n**Epic:** EP-003 — Rimborsi trasferta\n**Priority:** MEDIUM | **Story Points:** 3\n**Blocked by:** US-004, US-009\n**Scope:** MVP\n\n_Created by /archetipo-spec_"
+    },
+    {
+      "code": "US-011",
+      "title": "US-011: Mostrare warning quando una commessa supera il budget ore",
+      "epic_code": "EP-004",
+      "epic_title": "Controllo operativo e report",
+      "priority": "HIGH",
+      "story_points": 3,
+      "body": "## Story\n\nAs Marta,\nI want vedere un warning quando una commessa supera il budget ore previsto,\nso that possa intercettare subito gli sforamenti senza bloccare il lavoro operativo.\n\n## Demonstrates\n\nMarta apre la vista delle commesse o dei relativi riepiloghi e nota un avviso evidente sulle commesse che hanno superato il budget impostato. Nonostante il warning, i collaboratori possono continuare a registrare ore e Marta mantiene il controllo della situazione.\n\n## Acceptance Criteria\n\n- [ ] Quando il totale ore consuntivate di una commessa supera il budget configurato, il sistema mostra un warning visibile nel contesto operativo della commessa.\n- [ ] Il warning indica chiaramente quale commessa e in sforamento.\n- [ ] La presenza del warning non impedisce ulteriori inserimenti ore sulla commessa.\n\n---\n\n**Epic:** EP-004 — Controllo operativo e report\n**Priority:** HIGH | **Story Points:** 3\n**Blocked by:** US-003, US-005\n**Scope:** MVP\n\n_Created by /archetipo-spec_"
+    },
+    {
+      "code": "US-012",
+      "title": "US-012: Consultare report ore per collaboratore su periodo",
+      "epic_code": "EP-004",
+      "epic_title": "Controllo operativo e report",
+      "priority": "HIGH",
+      "story_points": 3,
+      "body": "## Story\n\nAs Marta,\nI want consultare il totale ore per collaboratore su un periodo selezionato,\nso that possa verificare rapidamente chi ha lavorato quanto nel range che mi interessa.\n\n## Demonstrates\n\nMarta apre il report ore per collaboratore, seleziona un intervallo di date e vede l'elenco dei collaboratori con il rispettivo totale ore. Cambiando periodo, il report si aggiorna e mostra subito il nuovo consolidato.\n\n## Acceptance Criteria\n\n- [ ] Marta puo selezionare un intervallo di date per filtrare il report.\n- [ ] Il report mostra una riga per collaboratore con il totale ore maturato nel periodo scelto.\n- [ ] Se nel periodo non esistono ore per un collaboratore, il report non mostra valori incoerenti o duplicati.\n\n---\n\n**Epic:** EP-004 — Controllo operativo e report\n**Priority:** HIGH | **Story Points:** 3\n**Blocked by:** US-005\n**Scope:** MVP\n\n_Created by /archetipo-spec_"
+    },
+    {
+      "code": "US-013",
+      "title": "US-013: Consultare report ore per cliente e commessa",
+      "epic_code": "EP-004",
+      "epic_title": "Controllo operativo e report",
+      "priority": "HIGH",
+      "story_points": 3,
+      "body": "## Story\n\nAs Marta,\nI want consultare le ore consuntivate per cliente e per singola commessa,\nso that possa capire dove si concentra l'effort operativo e quali incarichi stanno assorbendo piu tempo.\n\n## Demonstrates\n\nMarta apre il report per cliente e commessa e vede le ore aggregate per ciascun cliente, con dettaglio sulle relative commesse. Navigando il report puo confrontare rapidamente i carichi tra clienti diversi e tra incarichi dello stesso cliente.\n\n## Acceptance Criteria\n\n- [ ] Il report mostra le ore aggregate per cliente nel periodo selezionato.\n- [ ] Marta puo vedere per ogni cliente il dettaglio delle ore sulle singole commesse collegate.\n- [ ] Le commesse chiuse restano consultabili nei report storici se hanno registrazioni nel periodo richiesto.\n\n---\n\n**Epic:** EP-004 — Controllo operativo e report\n**Priority:** HIGH | **Story Points:** 3\n**Blocked by:** US-005, US-002\n**Scope:** MVP\n\n_Created by /archetipo-spec_"
+    },
+    {
+      "code": "US-014",
+      "title": "US-014: Consultare report rimborsi mensili per collaboratore e commessa",
+      "epic_code": "EP-004",
+      "epic_title": "Controllo operativo e report",
+      "priority": "MEDIUM",
+      "story_points": 4,
+      "body": "## Story\n\nAs Marta,\nI want consultare i rimborsi trasferta aggregati per mese, collaboratore e commessa,\nso that possa controllare rapidamente il totale rimborsi maturato e da cosa e composto.\n\n## Demonstrates\n\nMarta apre il report rimborsi di un mese e vede i totali per collaboratore con il dettaglio delle commesse coinvolte. In pochi secondi capisce chi ha maturato rimborsi e su quali incarichi si concentrano.\n\n## Acceptance Criteria\n\n- [ ] Marta puo selezionare un mese di riferimento per il report rimborsi.\n- [ ] Il report mostra il totale rimborsi per collaboratore nel mese scelto.\n- [ ] Marta puo vedere il dettaglio dei rimborsi per commessa all'interno del totale di ciascun collaboratore.\n\n---\n\n**Epic:** EP-004 — Controllo operativo e report\n**Priority:** MEDIUM | **Story Points:** 4\n**Blocked by:** US-010\n**Scope:** MVP\n\n_Created by /archetipo-spec_"
+    },
+    {
+      "code": "US-015",
+      "title": "US-015: Inviare o mostrare un reminder ai collaboratori con ore mancanti",
+      "epic_code": "EP-005",
+      "epic_title": "Reminder di fine mese",
+      "priority": "MEDIUM",
+      "story_points": 3,
+      "body": "## Story\n\nAs Marta,\nI want che il sistema ricordi ai collaboratori di completare le ore verso fine mese,\nso that possa ridurre le rincorse manuali e chiudere il periodo con dati piu completi.\n\n## Demonstrates\n\nVerso fine mese il sistema individua i collaboratori che non hanno ancora completato l'inserimento ore e mostra o invia loro un reminder. Marta puo contare su un sollecito standardizzato senza dover inseguire ogni persona manualmente.\n\n## Acceptance Criteria\n\n- [ ] Il sistema individua i collaboratori destinatari del reminder in base alla mancanza di ore registrate o a dati incompleti nel periodo corrente.\n- [ ] Il reminder viene generato o mostrato verso fine mese con un contenuto comprensibile per il collaboratore.\n- [ ] Lo stesso reminder non viene duplicato inutilmente nello stesso ciclo di fine mese per lo stesso collaboratore.\n\n---\n\n**Epic:** EP-005 — Reminder di fine mese\n**Priority:** MEDIUM | **Story Points:** 3\n**Blocked by:** US-005\n**Scope:** MVP\n\n_Created by /archetipo-spec_"
+    }
+  ]
+}

@@ -18,3 +18,14 @@ model User {
 
   @@map("users")
 }
+
+model Client {
+  id             String   @id @default(uuid())
+  name           String
+  normalizedName String   @unique @map("normalized_name")
+  isActive       Boolean  @default(true)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@map("clients")
+}

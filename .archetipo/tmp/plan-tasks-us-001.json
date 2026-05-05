@@ -1,0 +1,42 @@
+{
+  "issue": 1,
+  "plan_file": "docs/planning/US-001.md",
+  "summary": {
+    "total_tasks": 6,
+    "implementation_tasks": 5,
+    "test_tasks": 1,
+    "effort": "M-L"
+  },
+  "tasks": [
+    {
+      "id": "TASK-01",
+      "title": "TASK-01: Modellare il dominio clienti",
+      "body": "## Task\n\nIntrodurre il modello Prisma `Client` con i campi minimi richiesti dalla story e la base per la disattivazione logica.\n\n## Descrizione\n\n- aggiungere il modello `Client` nello schema Prisma\n- includere `id`, `name`, `isActive`, `createdAt`, `updatedAt`\n- definire la strategia anti-duplicato del nome cliente per il MVP\n- verificare i comandi necessari a rigenerazione client e push schema\n\n## File coinvolti\n\n- `prisma/schema.prisma`\n- `package.json`\n\n## Dipendenze\n\n- nessuna\n\n## Effort\n\n- M\n\n## Criteri di completamento\n\n- [ ] Il modello `Client` e presente nello schema Prisma con campi e default coerenti\n- [ ] La base dati supporta attivo/disattivato senza delete hard\n- [ ] La strategia di unicita del nome cliente e esplicitata"
+    },
+    {
+      "id": "TASK-02",
+      "title": "TASK-02: Implementare la logica server clienti",
+      "body": "## Task\n\nCreare query e comandi server-side per elenco, creazione, modifica, disattivazione e recupero dei soli clienti attivi.\n\n## Descrizione\n\n- creare il modulo server dei clienti\n- implementare validazione input e prevenzione duplicati\n- esporre create, update e deactivate tramite Server Actions\n- predisporre una query riusabile per i futuri flussi operativi che richiedono solo clienti attivi\n\n## File coinvolti\n\n- `src/lib/clients.ts` o `src/lib/domain/clients.ts`\n- `src/app/dashboard/clients/actions.ts`\n\n## Dipendenze\n\n- TASK-01\n\n## Effort\n\n- M\n\n## Criteri di completamento\n\n- [ ] Esiste una query per il backoffice e una per i soli clienti attivi\n- [ ] Le azioni create/update/deactivate gestiscono errori stabili\n- [ ] L'update non crea duplicati"
+    },
+    {
+      "id": "TASK-03",
+      "title": "TASK-03: Introdurre la shell backoffice condivisa",
+      "body": "## Task\n\nCreare il layout condiviso del backoffice, coerente con i mockup esistenti, e preparare la navigazione verso la feature clienti.\n\n## Descrizione\n\n- aggiungere `src/app/dashboard/layout.tsx`\n- riallineare la dashboard protetta alla nuova shell\n- adattare solo i token globali necessari per aderire al design system dei mockup\n\n## File coinvolti\n\n- `src/app/dashboard/layout.tsx`\n- `src/app/dashboard/page.tsx`\n- `src/app/globals.css`\n\n## Dipendenze\n\n- TASK-01\n\n## Effort\n\n- M\n\n## Mockup di riferimento\n\n- `docs/mockups/dashboard_backoffice_soci/code.html`\n- `docs/mockups/professional_coaching_planner/DESIGN.md`\n\n## Criteri di completamento\n\n- [ ] La dashboard usa una shell condivisa pronta per il backoffice\n- [ ] La navigazione espone la sezione clienti\n- [ ] Layout, gerarchia visiva, spacing, tipografia, colori e responsive behavior restano coerenti ai mockup"
+    },
+    {
+      "id": "TASK-04",
+      "title": "TASK-04: Costruire la pagina elenco clienti",
+      "body": "## Task\n\nImplementare la pagina protetta di elenco clienti con stato, struttura tabellare e CTA di gestione.\n\n## Descrizione\n\n- creare la pagina `dashboard/clients`\n- mostrare nome, stato e metadati utili\n- introdurre badge e componenti lista coerenti con il design system\n- preparare la pagina ai flussi di create/edit/disattivazione\n\n## File coinvolti\n\n- `src/app/dashboard/clients/page.tsx`\n- `src/components/clients/client-list.tsx`\n- `src/components/clients/client-status-badge.tsx`\n\n## Dipendenze\n\n- TASK-02\n- TASK-03\n\n## Effort\n\n- M\n\n## Mockup di riferimento\n\n- `docs/mockups/dashboard_backoffice_soci/code.html`\n- `docs/mockups/professional_coaching_planner/DESIGN.md`\n\n## Criteri di completamento\n\n- [ ] L'elenco mostra i clienti e il loro stato aggiornato\n- [ ] Le CTA di gestione sono chiare\n- [ ] Layout, gerarchia visiva, spacing, tipografia, colori e responsive behavior restano coerenti ai mockup"
+    },
+    {
+      "id": "TASK-05",
+      "title": "TASK-05: Aggiungere form e flussi di mutazione UI",
+      "body": "## Task\n\nImplementare i flussi utente di creazione, modifica e disattivazione cliente con validazioni e feedback immediato.\n\n## Descrizione\n\n- creare il form/dialog per create e update\n- aggiungere l'azione di disattivazione con conferma\n- integrare error handling e refresh dati della pagina\n- mostrare chiaramente errori di input o duplicato\n\n## File coinvolti\n\n- `src/components/clients/client-form-dialog.tsx`\n- `src/components/clients/client-actions.tsx`\n- `src/app/dashboard/clients/page.tsx`\n\n## Dipendenze\n\n- TASK-04\n\n## Effort\n\n- M\n\n## Mockup di riferimento\n\n- `docs/mockups/dashboard_backoffice_soci/code.html`\n- `docs/mockups/professional_coaching_planner/DESIGN.md`\n\n## Criteri di completamento\n\n- [ ] Create, edit e disattivazione funzionano end-to-end\n- [ ] La UI mostra feedback chiaro su errori e successo\n- [ ] Layout, gerarchia visiva, spacing, tipografia, colori e responsive behavior restano coerenti ai mockup"
+    },
+    {
+      "id": "TASK-06",
+      "title": "TASK-06: Introdurre e applicare la copertura test minima",
+      "body": "## Task\n\nConfigurare il test runner minimo del progetto e coprire la logica e i flussi critici della feature clienti.\n\n## Descrizione\n\n- aggiungere script e dipendenze test\n- configurare il runner scelto\n- testare validazione nome, duplicati e disattivazione\n- coprire almeno un flusso UI o action di create/edit\n\n## File coinvolti\n\n- `package.json`\n- config test\n- file test dominio/UI/actions\n\n## Dipendenze\n\n- TASK-02\n- TASK-05\n\n## Effort\n\n- M\n\n## Criteri di completamento\n\n- [ ] Esiste un comando test locale ripetibile\n- [ ] I test coprono i casi a maggior rischio della feature\n- [ ] I test dimostrano l'esclusione dei clienti disattivati dai futuri flussi operativi"
+    }
+  ]
+}

@@ -1,58 +1,106 @@
 import Link from "next/link";
-import { redirect } from "next/navigation";
-import { getCurrentUser } from "@/lib/user";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import {
+  ArrowRight,
+  Building2,
+  FolderKanban,
+  ShieldCheck,
+} from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { buttonVariants } from "@/components/ui/button-variants";
+import { cn } from "@/lib/utils";
 
 export default async function Dashboard() {
-  const user = await getCurrentUser();
-  if (!user) redirect("/auth/signin");
-
-  const name = user.name ?? user.email ?? "User";
-  const email = user.email ?? "";
-  const avatarUrl = user.image ?? "";
-  const initials = name
-    .split(" ")
-    .map((n: string) => n[0])
-    .join("")
-    .toUpperCase()
-    .slice(0, 2);
-
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center gap-6 p-8">
-      <Card className="w-full max-w-md">
-        <CardHeader className="flex flex-row items-center gap-4">
-          <Avatar className="h-16 w-16">
-            <AvatarImage src={avatarUrl} alt={name} />
-            <AvatarFallback>{initials}</AvatarFallback>
-          </Avatar>
-          <div>
-            <CardTitle>{name}</CardTitle>
-            <p className="text-muted-foreground text-sm">{email}</p>
+    <div className="space-y-6">
+      <section className="rounded-[28px] border border-border/80 bg-card px-6 py-6 shadow-[0_20px_60px_-50px_rgba(11,28,48,0.35)] sm:px-8">
+        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/75">
+          Dashboard
+        </p>
+        <div className="mt-3 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-semibold tracking-tight text-foreground">
+              Gestione anagrafiche pronta per il backoffice.
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-muted-foreground">
+              La nuova shell riprende il linguaggio dei mockup e prepara il
+              prodotto a ospitare clienti, collaboratori e commesse con una
+              navigazione coerente.
+            </p>
           </div>
-        </CardHeader>
-        <CardContent className="flex flex-col gap-4">
-          <p className="text-muted-foreground text-sm">
-            This is a protected page. Only authenticated users can see this.
-          </p>
-          <div className="flex gap-4">
+          <Link
+            href="/dashboard/clients"
+            className={cn(buttonVariants({ variant: "default" }))}
+          >
+            Vai ai clienti
+            <ArrowRight className="size-4" />
+          </Link>
+        </div>
+      </section>
+
+      <section className="grid gap-4 md:grid-cols-3">
+        <Card className="border border-border/80 shadow-none">
+          <CardHeader>
+            <CardDescription className="text-xs font-semibold uppercase tracking-[0.22em] text-primary/75">
+              Anagrafiche
+            </CardDescription>
+            <CardTitle className="flex items-center gap-2 text-xl">
+              <Building2 className="size-5 text-primary" />
+              Clienti
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3 text-sm text-muted-foreground">
+            <p>
+              Crea, aggiorna e disattiva l&apos;anagrafica clienti mantenendo
+              puliti i flussi operativi successivi.
+            </p>
             <Link
-              href="/"
-              className="border-input bg-background hover:bg-accent hover:text-accent-foreground inline-flex h-10 items-center justify-center rounded-md border px-4 py-2 text-sm font-medium"
+              href="/dashboard/clients"
+              className="inline-flex items-center gap-2 font-medium text-primary"
             >
-              Back to Home
+              Apri la sezione clienti
+              <ArrowRight className="size-4" />
             </Link>
-            <form action="/auth/signout" method="post">
-              <button
-                type="submit"
-                className="bg-destructive text-destructive-foreground hover:bg-destructive/90 inline-flex h-10 items-center justify-center rounded-md px-4 py-2 text-sm font-medium"
-              >
-                Sign Out
-              </button>
-            </form>
-          </div>
-        </CardContent>
-      </Card>
+          </CardContent>
+        </Card>
+
+        <Card className="border border-border/80 shadow-none">
+          <CardHeader>
+            <CardDescription className="text-xs font-semibold uppercase tracking-[0.22em] text-primary/75">
+              Sicurezza
+            </CardDescription>
+            <CardTitle className="flex items-center gap-2 text-xl">
+              <ShieldCheck className="size-5 text-primary" />
+              Accesso protetto
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="text-sm leading-7 text-muted-foreground">
+            La route resta protetta dal middleware Supabase esistente e tutte le
+            mutazioni clienti passano da Server Actions autenticate.
+          </CardContent>
+        </Card>
+
+        <Card className="border border-border/80 shadow-none">
+          <CardHeader>
+            <CardDescription className="text-xs font-semibold uppercase tracking-[0.22em] text-primary/75">
+              Prossimi moduli
+            </CardDescription>
+            <CardTitle className="flex items-center gap-2 text-xl">
+              <FolderKanban className="size-5 text-primary" />
+              Flussi operativi
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="text-sm leading-7 text-muted-foreground">
+            L&apos;elenco dei soli clienti attivi e gia pronto per essere
+            riusato nelle prossime story su commesse e selettori.
+          </CardContent>
+        </Card>
+      </section>
     </div>
   );
 }
