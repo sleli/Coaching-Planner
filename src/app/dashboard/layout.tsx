@@ -7,6 +7,7 @@ import { getCurrentUser } from "@/lib/user";
 const navItems = [
   { href: "/dashboard", label: "Dashboard", icon: "dashboard" as const },
   { href: "/dashboard/clients", label: "Clienti", icon: "clients" as const },
+  { href: "/dashboard/projects", label: "Commesse", icon: "projects" as const },
 ];
 
 export default async function DashboardLayout({

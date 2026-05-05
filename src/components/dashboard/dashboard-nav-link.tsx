@@ -2,12 +2,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Building2, LayoutDashboard } from "lucide-react";
+import { Building2, FolderKanban, LayoutDashboard } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const icons = {
   dashboard: LayoutDashboard,
   clients: Building2,
+  projects: FolderKanban,
 } as const;
 
 type DashboardNavLinkProps = {
