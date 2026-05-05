@@ -1,0 +1,25 @@
+#only valid for github connector
+github:
+  owner: sleli
+  project_number: 18
+  project_node_id: PVT_kwHOAAxEXM4BWzlI
+  fields:
+    status:
+      id: PVTSSF_lAHOAAxEXM4BWzlIzhSE4ZI
+      options:
+        todo: cacda8b2
+        planned: 96960e05
+        in_progress: c1cc3afd
+        review: 6f7c2afa
+        done: d39cc1d5
+    priority:
+      id: PVTSSF_lAHOAAxEXM4BWzlIzhSE4bA
+      options:
+        high: 8fa171a2
+        medium: 224a7588
+        low: dbfab9e4
+    story_points:
+      id: PVTF_lAHOAAxEXM4BWzlIzhSE4c4
+    epic:
+      id: PVTSSF_lAHOAAxEXM4BWzlIzhSE4ek
+      # Options managed dynamically by /archetipo-spec
